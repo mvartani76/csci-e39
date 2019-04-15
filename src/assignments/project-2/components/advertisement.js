@@ -15,8 +15,8 @@ constructor() {
 			<div className="ad-item">
 				<ul>
 					{
-						adItems.map(item => {
-							return <li><img src={item.url}/></li>
+						adItems.map((item,i) => {
+							return <li key={i}><img src={item.url}/></li>
 						})
 					}
 				</ul>
