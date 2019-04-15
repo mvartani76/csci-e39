@@ -5,6 +5,7 @@ const Layout = ({children}) => (
 		{oneByType(children, Layout.Header)}
 		{oneByType(children, Layout.Content)}
 		{oneByType(children, Layout.Sidebar)}
+		{oneByType(children, Layout.Adbar)}
 		{oneByType(children, Layout.Footer)}
 	</div>
 )
@@ -27,6 +28,13 @@ Layout.Content = ({title, children}) => (
 
 Layout.Sidebar = ({title, children}) => (
 	<aside className="layout--sidebar">
+		{title && <h2 className="heading">{title}</h2>}
+		{children}
+	</aside>
+)
+
+Layout.Adbar = ({title, children}) => (
+	<aside className="layout--adbar">
 		{title && <h2 className="heading">{title}</h2>}
 		{children}
 	</aside>

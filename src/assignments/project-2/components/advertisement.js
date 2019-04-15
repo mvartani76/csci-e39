@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import autobind from 'class-autobind'
 
-class Menu extends React.Component {
+class Advertisement extends React.Component {
 
 constructor() {
 		super(...arguments)
@@ -10,13 +10,13 @@ constructor() {
 	}
 
 	render() {
-		const {menuItems} = this.props
+		const {adItems} = this.props
 		return( 
-			<div className="menu-item">
+			<div className="ad-item">
 				<ul>
 					{
-						menuItems.map((item,i) => {
-							return <li key={i}><a>{item.name}</a></li>
+						adItems.map(item => {
+							return <li><img src={item.url}/></li>
 						})
 					}
 				</ul>
@@ -24,4 +24,4 @@ constructor() {
 			 )
 		}
 	}
-export default Menu
+export default Advertisement

@@ -4,6 +4,7 @@ import autobind from 'class-autobind'
 
 import Layout from './components/layout'
 import Menu from './components/menu'
+import Advertisement from './components/advertisement'
 
 import './app.scss'
 
@@ -81,32 +82,28 @@ class Chat extends React.Component {
 			</Layout.Header>
 
 			<Layout.Content title="I am main content">
-				
-
 				<h1>Chatroom</h1>
 
-			<h2>Members</h2>
-			<ul>
-				{classroom.students.map(({id, name}) =>
-					<li key={id}><span>{name}</span></li>
-				)}
-			</ul>
+				<h2>Members</h2>
+				<ul>
+					{classroom.students.map(({id, name}) =>
+						<li key={id}><span>{name}</span></li>
+					)}
+				</ul>
 
-			<h2>Messages</h2>
-			<ul>
-				{chat.messages.map(({id, student, text, createdAt}) =>
-					<li key={id}>
-						<label>{student.name} at {createdAt.toISOString()}</label>
-						<p>{text}</p>
-					</li>
-				)}
-			</ul>
+				<h2>Messages</h2>
+				<ul>
+					{chat.messages.map(({id, student, text, createdAt}) =>
+						<li key={id}>
+							<label>{student.name} at {createdAt.toISOString()}</label>
+							<p>{text}</p>
+						</li>
+					)}
+				</ul>
 
-			<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
-			<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
-			<p>{this.getTypingMessage()}</p>
-
-			
+				<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
+				<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
+				<p>{this.getTypingMessage()}</p>			
 			</Layout.Content>
 			
 			<Layout.Sidebar title="I am a Sidebar">
@@ -114,6 +111,11 @@ class Chat extends React.Component {
 					<li>I am in the sidebar  </li>
 				</ul>
 			</Layout.Sidebar>
+
+
+			<Layout.Adbar title="I am an Adbar">
+				<Advertisement adItems={[ADITEM1, ADITEM2, ADITEM3]}/>
+			</Layout.Adbar>
 			<Layout.Footer>
 				<p>I am the footer</p>
 			</Layout.Footer>
@@ -167,6 +169,21 @@ const MENUITEM3 = {
 const MENUITEM4 = {
 	name: "Login",
 	url: "/login",
+}
+
+const ADITEM1 = {
+	name: "",
+	url: "https://via.placeholder.com/150/0000FF/808080?Text=Advertisement1",
+}
+
+const ADITEM2 = {
+	name: "",
+	url: "https://via.placeholder.com/150/008080/FFFFFF ?Text=Advertisement2",
+}
+
+const ADITEM3 = {
+	name: "",
+	url: "https://via.placeholder.com/150/FF8080/FFFFFF ?Text=Advertisement3",
 }
 
 export default Chat

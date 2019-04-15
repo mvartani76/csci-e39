@@ -112,8 +112,8 @@ footer {
 .layout-grid {
 	display: grid;
 	grid-column-gap: 30px;
-    grid-template-columns: 1fr 3fr;
-    margin:auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: auto;
 	background: white;
 	padding: 20px 30px;
 	margin-top: 50px;
@@ -122,11 +122,11 @@ footer {
 
     @media(min-width: $breakpoint) {
         grid-template-areas: 
-            "header header header"
-            "side main main"
-            "side main main"
-            "side main main"
-            "footer footer footer";
+            "header header header header"
+            "side main main ad"
+            "side main main ad"
+            "side main main ad"
+            "footer footer footer footer";
 
         .layout--header {
             grid-area: header;
@@ -141,10 +141,13 @@ footer {
             background-color: invert($sidebar-background-color);
         }
 
+        .layout--adbar {
+            grid-area: ad;
+        }
+
         .layout--footer {
             grid-area: footer;
         }
-
     }
 }
 
