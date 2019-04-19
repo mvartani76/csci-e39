@@ -8,6 +8,9 @@ import Advertisement from './components/advertisement'
 import Messages from './components/messages'
 import Members from './components/members'
 
+import MENUITEMS from './data/menu_data.js'
+import ADITEMS from './data/ad_data.js'
+
 import './app.scss'
 
 
@@ -103,7 +106,6 @@ class Chat extends React.Component {
 				</ul>
 			</Layout.Sidebar>
 
-
 			<Layout.Adbar title="I am an Adbar">
 				<Advertisement adItems={ADITEMS}/>
 			</Layout.Adbar>
@@ -141,43 +143,5 @@ Chat.propTypes = {
 	}),
 	actions: PropTypes.object.isRequired,
 }
-
-const MENUITEMS = [
-	{
-		name: "Home",
-		url: "/home",
-	},
-	{
-		name: "Avatars",
-		url: "/avatars",
-	},
-	{
-		name: "Members",
-		url: "/members",
-	},
-	{
-		name: "Login",
-		url: "/login",
-	},
-]
-
-const ADITEMS = [
-	{
-		name: "",
-		url: "https://loremflickr.com/150/150/pizza?random=1",
-	},
-	{
-		name: "",
-		url: "https://loremflickr.com/150/150/pizza?random=2",
-	},
-	{
-		name: "",
-		url: "https://loremflickr.com/150/150/pizza?random=3",
-	},
-	{
-		name: "",
-		url: "https://loremflickr.com/150/150/pizza?random=4",
-	},
-]
 
 export default Chat
