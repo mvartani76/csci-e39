@@ -80,7 +80,7 @@ class Chat extends React.Component {
 		
 		<Layout>
 			<Layout.Header title="Pizza Lover's Chat" >
-				<Menu menuItems={[MENUITEM1,MENUITEM2,MENUITEM3,MENUITEM4]}/>
+				<Menu menuItems={MENUITEMS}/>
 			</Layout.Header>
 
 			<Layout.Content title="I am main content">
@@ -105,10 +105,10 @@ class Chat extends React.Component {
 
 
 			<Layout.Adbar title="I am an Adbar">
-				<Advertisement adItems={[ADITEM1, ADITEM2, ADITEM3]}/>
+				<Advertisement adItems={ADITEMS}/>
 			</Layout.Adbar>
 			<Layout.Footer>
-				<p>I am the footer</p>
+				<p>&copy; 2019 PizzaChat App</p>
 			</Layout.Footer>
 		</Layout>
 		)
@@ -142,39 +142,42 @@ Chat.propTypes = {
 	actions: PropTypes.object.isRequired,
 }
 
-const MENUITEM1 = {
-	name: "Home",
-	url: "/home",
-}
+const MENUITEMS = [
+	{
+		name: "Home",
+		url: "/home",
+	},
+	{
+		name: "Avatars",
+		url: "/avatars",
+	},
+	{
+		name: "Members",
+		url: "/members",
+	},
+	{
+		name: "Login",
+		url: "/login",
+	},
+]
 
-const MENUITEM2 = {
-	name: "Avatars",
-	url: "/avatars",
-}
-
-const MENUITEM3 = {
-	name: "Members",
-	url: "/members",
-}
-
-const MENUITEM4 = {
-	name: "Login",
-	url: "/login",
-}
-
-const ADITEM1 = {
-	name: "",
-	url: "https://via.placeholder.com/150/0000FF/808080?Text=Advertisement1",
-}
-
-const ADITEM2 = {
-	name: "",
-	url: "https://via.placeholder.com/150/008080/FFFFFF ?Text=Advertisement2",
-}
-
-const ADITEM3 = {
-	name: "",
-	url: "https://via.placeholder.com/150/FF8080/FFFFFF ?Text=Advertisement3",
-}
+const ADITEMS = [
+	{
+		name: "",
+		url: "https://loremflickr.com/150/150/pizza?random=1",
+	},
+	{
+		name: "",
+		url: "https://loremflickr.com/150/150/pizza?random=2",
+	},
+	{
+		name: "",
+		url: "https://loremflickr.com/150/150/pizza?random=3",
+	},
+	{
+		name: "",
+		url: "https://loremflickr.com/150/150/pizza?random=4",
+	},
+]
 
 export default Chat
