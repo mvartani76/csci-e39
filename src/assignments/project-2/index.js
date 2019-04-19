@@ -5,6 +5,7 @@ import autobind from 'class-autobind'
 import Layout from './components/layout'
 import Menu from './components/menu'
 import Advertisement from './components/advertisement'
+import Messages from './components/messages'
 
 import './app.scss'
 
@@ -92,14 +93,7 @@ class Chat extends React.Component {
 				</ul>
 
 				<h2>Messages</h2>
-				<ul>
-					{chat.messages.map(({id, student, text, createdAt}) =>
-						<li key={id}>
-							<label>{student.name} at {createdAt.toISOString()}</label>
-							<p>{text}</p>
-						</li>
-					)}
-				</ul>
+				<Messages chat={chat} />
 
 				<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
 				<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
