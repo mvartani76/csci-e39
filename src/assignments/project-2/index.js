@@ -6,6 +6,7 @@ import Layout from './components/layout'
 import Menu from './components/menu'
 import Advertisement from './components/advertisement'
 import Messages from './components/messages'
+import Members from './components/members'
 
 import './app.scss'
 
@@ -86,11 +87,7 @@ class Chat extends React.Component {
 				<h1>Chatroom</h1>
 
 				<h2>Members</h2>
-				<ul>
-					{classroom.students.map(({id, name}) =>
-						<li key={id}><span>{name}</span></li>
-					)}
-				</ul>
+				<Members classroom={classroom} />
 
 				<h2>Messages</h2>
 				<Messages chat={chat} />
