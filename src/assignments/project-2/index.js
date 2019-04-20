@@ -102,7 +102,7 @@ class Chat extends React.Component {
 				<Members classroom={classroom} />
 			</Layout.Sidebar>
 
-			<Layout.Adbar title="I am an Adbar">
+			<Layout.Adbar>
 				<Advertisement adItems={ADITEMS}/>
 			</Layout.Adbar>
 			<Layout.Footer>
