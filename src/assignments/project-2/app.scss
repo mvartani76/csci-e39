@@ -1,4 +1,6 @@
 $primary-color: #337ab7;
+$body-background-color: green;
+$border-color: green;
 $color: #fff;
 $primary-accent: royalblue;
 $font-family: 'Amatic SC', cursive;
@@ -7,10 +9,13 @@ $font-weight: 200;
 
 $sidebar-background-color: blue;
 
+$menu-background-color: #33cc33;
+$menu-background-hover-color: darken($menu-background-color, 10%);
+$menu-item-font-size: 20px;
+
 $chat-message-block-height: 50vh;
 $chat-message-block-margin: 5px; 
 $chat-message-block-padding: 5px;
-
 
 $chat-message-width: 50%;
 $chat-message-sender-color: #efefef;
@@ -34,7 +39,7 @@ $chat-send-button-border-radius: 10px;
 $breakpoint: 768px;
 
 body {
-	background-color: $primary-color;
+	background-color: $body-background-color;
     font-family: $font-family;
 }
 
@@ -43,7 +48,7 @@ h1, h2 {
 }
 
 h1 {
-   border-bottom: 1px solid $primary-color;
+   border-bottom: 1px solid $border-color;
    padding: 10px;
 }
 
@@ -54,7 +59,7 @@ ul, li {
 }
 
 footer {
-    border-top: 1px solid $primary-color;
+    border-top: 1px solid $border-color;
     text-align: center;
 }
 
@@ -165,11 +170,12 @@ progress[value]  {
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #333333;
+      background-color: $menu-background-color;
     }
 
     li {
       float: left;
+      font-size: $menu-item-font-size;
     }
 
     li a {
@@ -181,7 +187,7 @@ progress[value]  {
     }
 
     li a:hover {
-      background-color: #111111;
+      background-color: $menu-background-hover-color;
     }
 }
 
