@@ -17,9 +17,19 @@ $chat-message-sender-color: #efefef;
 $chat-message-margin-left: 20px;
 $chat-message-margin-top: 20px;
 $chat-message-margin-bottom: 20px;
-$chat-message-border-radius: 15px;
+$chat-message-border-radius: 10px;
 $chat-message-arrow-height: 10px;
 $chat-message-arrow-left-position: 30px;
+
+$chat-input-border-radius: 10px;
+$chat-input-margin: 5px;
+$chat-input-min-height: 50px;
+$chat-input-padding-left: 5px;
+
+$chat-send-button-color: orange;
+$chat-send-button-color-hover: darken($chat-send-button-color, 4%);
+$chat-send-button-min-height: 25px;
+$chat-send-button-border-radius: 10px;
 
 $breakpoint: 768px;
 
@@ -59,7 +69,6 @@ footer {
     display: grid;
     grid-column-gap: 10px;
 }
-
 
 .heading {
 	font-family: $font-family;
@@ -213,4 +222,21 @@ progress[value]  {
         z-index: -10;
     }
 
+}
+
+.chat-input {
+    min-height: $chat-input-min-height;
+    border-radius: $chat-input-border-radius;
+    margin: $chat-input-margin;
+    padding-left: 5px;
+}
+
+.chat-send-button {
+    min-height: $chat-send-button-min-height;
+    background-color: $chat-send-button-color;
+    border-radius: $chat-send-button-border-radius;
+
+    &:hover {
+        background-color: $chat-send-button-color-hover;
+    }
 }

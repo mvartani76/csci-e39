@@ -12,8 +12,8 @@ constructor() {
 	render() {
 		const {currentText, onSend, onType, getTypingMessage} = this.props
 		return <>
-				<input value={currentText} onChange={onType} onKeyUp={onSend} />
-				<button disabled={currentText === ``} onClick={onSend}>Send</button>
+				<input className="chat-input" value={currentText} onChange={onType} onKeyUp={onSend} placeholder="Type your love of pizza here..."/>
+				<button className="chat-send-button" disabled={currentText === ``} onClick={onSend}>Send</button>
 				<p>{getTypingMessage}</p>
 			</>
 		}
