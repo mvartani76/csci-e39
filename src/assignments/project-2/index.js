@@ -68,21 +68,20 @@ class Chat extends React.Component {
 				<Menu menuItems={MENUITEMS}/>
 			</Layout.Header>
 
-			<Layout.Content title="I am main content">
-				<h1>Chatroom</h1>
-
+			<Layout.Content title="Chatroom">
 				<h2>Messages</h2>
 				<Messages chat={chat} />
 				<InputBox currentText={currentText} onType={this.onType} onSend={this.onSend} getTypingMessage={this.getTypingMessage()} />
 			</Layout.Content>
 			
-			<Layout.Sidebar>
-				<h2>Members</h2>
+			<Layout.Sidebar title="Members">
 				<Members classroom={classroom} />
 			</Layout.Sidebar>
 
-			<Layout.Adbar>
-				<Advertisement adItems={ADITEMS}/>
+			<Layout.Adbar title="Pizza Partners">
+				<div class="ads-container">
+					<Advertisement adItems={ADITEMS}/>
+				</div>
 			</Layout.Adbar>
 			<Layout.Footer>
 				<p>&copy; 2019 PizzaChat App</p>

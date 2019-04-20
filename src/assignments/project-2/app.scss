@@ -6,6 +6,7 @@ $primary-accent: royalblue;
 $font-family: 'Amatic SC', cursive;
 $border-radius: 8px;
 $font-weight: 200;
+$heading-font-size: 26px;
 
 $sidebar-background-color: blue;
 
@@ -37,6 +38,9 @@ $chat-send-button-min-height: 25px;
 $chat-send-button-border-radius: 10px;
 $chat-send-button-font-size: 18px;
 $chat-send-button-font-color: #006600;
+
+$ads-container-height: 90%;
+$ads-container-width: 100%;
 
 $breakpoint: 768px;
 
@@ -79,6 +83,8 @@ footer {
 
 .heading {
 	font-family: $font-family;
+    font-size: $heading-font-size;
+    border-bottom: 1px solid $border-color;
 }
 
 .layout-grid {
@@ -118,7 +124,7 @@ footer {
             text-align: center;
             background-color: red;
             height: 100%;
-            display: table;
+            
         }
 
         .layout--footer {
@@ -156,6 +162,13 @@ footer {
 }
 
 // Ad Bar Styling
+.ads-container {
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    height: $ads-container-height;
+    width: $ads-container-width;
+}
 .ad-item {
     display:table-cell;
     vertical-align:middle;
@@ -191,7 +204,6 @@ footer {
         border-bottom: $chat-message-arrow-height solid $chat-message-sender-color;
         z-index: -10;
     }
-
 }
 
 .chat-input {
