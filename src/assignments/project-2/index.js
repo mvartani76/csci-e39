@@ -13,25 +13,6 @@ import ADITEMS from './data/ad_data.js'
 
 import './app.scss'
 
-
-
-// COMPONENTS
-
-const Img = ({children, title, src, description }) => (
-	<figure className="polaroid">
-		<img src={src}  alt={description ? description : title}/>
-		{description && <figcaption className="polaroid-caption">{description}</figcaption>}
-		{children}
-	</figure>
-);
-
-const ItemCard = ({children, title, src, description }) => (
-	<div>
-		<Img title={title} src={src} description={description}/>
-		{children}
-	</div>
-);
-
 class Chat extends React.Component {
 
 	constructor() {
