@@ -11,7 +11,7 @@ constructor() {
 
 	render() {
 		const {chat} = this.props
-		return <ul>
+		return <ul className="message-block">
 					{chat.messages.map(({id, student, text, createdAt}) =>
 						<li key={id}>
 							<label>{student.name} at {createdAt.toISOString()}</label>

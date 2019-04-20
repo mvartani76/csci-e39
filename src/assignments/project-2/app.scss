@@ -7,6 +7,10 @@ $font-weight: 200;
 
 $sidebar-background-color: blue;
 
+$chat-message-block-height: 50vh;
+$chat-message-block-margin: 5px; 
+$chat-message-block-padding: 5px;
+
 
 $chat-message-width: 50%;
 $chat-message-sender-color: #efefef;
@@ -176,6 +180,13 @@ progress[value]  {
 .ad-item {
     display:table-cell;
     vertical-align:middle;
+}
+
+.message-block {
+    margin: $chat-message-block-margin; 
+    padding: $chat-message-block-padding;
+    height: $chat-message-block-height; 
+    overflow: auto; 
 }
 
 .message-text {
