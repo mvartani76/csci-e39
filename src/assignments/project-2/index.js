@@ -89,9 +89,6 @@ class Chat extends React.Component {
 			<Layout.Content title="I am main content">
 				<h1>Chatroom</h1>
 
-				<h2>Members</h2>
-				<Members classroom={classroom} />
-
 				<h2>Messages</h2>
 				<Messages chat={chat} />
 
@@ -100,10 +97,9 @@ class Chat extends React.Component {
 				<p>{this.getTypingMessage()}</p>			
 			</Layout.Content>
 			
-			<Layout.Sidebar title="I am a Sidebar">
-				<ul className="item-list">
-					<li>I am in the sidebar  </li>
-				</ul>
+			<Layout.Sidebar>
+				<h2>Members</h2>
+				<Members classroom={classroom} />
 			</Layout.Sidebar>
 
 			<Layout.Adbar title="I am an Adbar">
