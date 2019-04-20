@@ -35,6 +35,8 @@ $chat-send-button-color: orange;
 $chat-send-button-color-hover: darken($chat-send-button-color, 4%);
 $chat-send-button-min-height: 25px;
 $chat-send-button-border-radius: 10px;
+$chat-send-button-font-size: 18px;
+$chat-send-button-font-color: #006600;
 
 $breakpoint: 768px;
 
@@ -234,13 +236,16 @@ progress[value]  {
     min-height: $chat-input-min-height;
     border-radius: $chat-input-border-radius;
     margin: $chat-input-margin;
-    padding-left: 5px;
+    padding-left: $chat-input-padding-left;
 }
 
 .chat-send-button {
     min-height: $chat-send-button-min-height;
     background-color: $chat-send-button-color;
     border-radius: $chat-send-button-border-radius;
+    font-family: $font-family;
+    font-size: $chat-send-button-font-size;
+    color: $chat-send-button-font-color;
 
     &:hover {
         background-color: $chat-send-button-color-hover;
