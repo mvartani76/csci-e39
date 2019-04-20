@@ -81,23 +81,6 @@ footer {
 	font-family: $font-family;
 }
 
-.item-list {
-	li:not(:last-of-type) {
-		margin-bottom: 15px;
-	}
-	li:first-of-type {
-
-		.item-card-image {
-			display: block;
-			max-width: 200px;
-			width: 100%;
-		}
-	}
-}
-
-.failure {
-    color: crimson;
-}
 .layout-grid {
 	display: grid;
 	grid-column-gap: 5px;
@@ -144,28 +127,7 @@ footer {
     }
 }
 
-
-.uploader-input {
-    color: $color;
-	background-color: $primary-color;
-    border-radius: $border-radius;
-	font-family: $font-family;
-    font-weight: $font-weight;
-    
-}
-
-progress[value]  {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  color: $primary-accent; 
-  width: 90%;
-  height: 10px;
-  margin: 10px;
-}
-
-// Styling for hoziontal navigation bar at the top
+// Styling for horizontal navigation bar at the top
 .menu-item {
     ul {
       list-style-type: none;
