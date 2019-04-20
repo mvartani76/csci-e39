@@ -7,6 +7,7 @@ import Menu from './components/menu'
 import Advertisement from './components/advertisement'
 import Messages from './components/messages'
 import Members from './components/members'
+import InputBox from './components/inputbox'
 
 import MENUITEMS from './data/menu_data.js'
 import ADITEMS from './data/ad_data.js'
@@ -72,10 +73,7 @@ class Chat extends React.Component {
 
 				<h2>Messages</h2>
 				<Messages chat={chat} />
-
-				<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
-				<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
-				<p>{this.getTypingMessage()}</p>			
+				<InputBox currentText={currentText} onType={this.onType} onSend={this.onSend} getTypingMessage={this.getTypingMessage()} />
 			</Layout.Content>
 			
 			<Layout.Sidebar>
