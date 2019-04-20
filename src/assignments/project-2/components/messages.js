@@ -15,7 +15,7 @@ constructor() {
 					{chat.messages.map(({id, student, text, createdAt}) =>
 						<li key={id}>
 							<label>{student.name} at {createdAt.toISOString()}</label>
-							<p>{text}</p>
+							<p className="message-text">{text}</p>
 						</li>
 					)}
 				</ul>

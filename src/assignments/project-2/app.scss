@@ -7,6 +7,16 @@ $font-weight: 200;
 
 $sidebar-background-color: blue;
 
+
+$chat-message-width: 50%;
+$chat-message-sender-color: #efefef;
+$chat-message-margin-left: 20px;
+$chat-message-margin-top: 20px;
+$chat-message-margin-bottom: 20px;
+$chat-message-border-radius: 15px;
+$chat-message-arrow-height: 10px;
+$chat-message-arrow-left-position: 30px;
+
 $breakpoint: 768px;
 
 body {
@@ -129,7 +139,7 @@ footer {
         .layout--header {
             grid-area: header;
         }
-q
+
         .layout--main {
             grid-area: main;
         }
@@ -205,4 +215,30 @@ progress[value]  {
 .ad-item {
     display:table-cell;
     vertical-align:middle;
+}
+
+.message-text {
+    background-color: $chat-message-sender-color;
+    width: $chat-message-width;
+    margin-left: $chat-message-margin-left;
+    margin-top: $chat-message-margin-top;
+    margin-bottom: $chat-message-margin-bottom;
+    padding: 10px 20px;
+    border-radius: $chat-message-border-radius;
+    position: relative;
+    z-index: 0;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        
+        left: $chat-message-arrow-left-position;
+        top: -$chat-message-arrow-height;
+        border-top: none;
+        border-right: $chat-message-arrow-height solid transparent;
+        border-left: $chat-message-arrow-height solid transparent;
+        border-bottom: $chat-message-arrow-height solid $chat-message-sender-color;
+        z-index: -10;
+    }
+
 }
