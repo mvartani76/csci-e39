@@ -13,7 +13,7 @@ constructor() {
 		const {classroom} = this.props
 		return <ul>
 					{classroom.students.map(({id, name}) =>
-						<li key={id}><span>{name}</span></li>
+						<li className="member-list" key={id}><img src="https://avatars.dicebear.com/v2/male/{name}.svg?options[mood][]=happy" /><span>{name}</span></li>
 					)}
 				</ul>
 		}

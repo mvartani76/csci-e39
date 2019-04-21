@@ -8,11 +8,15 @@ $border-radius: 8px;
 $font-weight: 200;
 $heading-font-size: 26px;
 
-$sidebar-background-color: blue;
-
 $menu-background-color: #33cc33;
 $menu-background-hover-color: darken($menu-background-color, 10%);
 $menu-item-font-size: 20px;
+
+$sidebar-background-color: blue;
+$member-list-img-width: 10%;
+$member-list-padding-left: 10px;
+$member-list-font-size: 20px;
+
 
 $chat-message-block-height: 50vh;
 $chat-message-block-margin: 5px; 
@@ -158,6 +162,16 @@ footer {
 
     li a:hover {
       background-color: $menu-background-hover-color;
+    }
+}
+
+// Member Bar Styling
+.member-list {
+    font-size: $member-list-font-size;
+    padding-left: $member-list-padding-left;
+    img {
+        vertical-align: middle;
+        width: $member-list-img-width;
     }
 }
 
