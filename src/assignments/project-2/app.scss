@@ -218,6 +218,12 @@ footer {
         border-bottom: $chat-message-arrow-height solid $chat-message-sender-color;
         z-index: -10;
     }
+
+    img {
+        vertical-align: middle;
+        height: 25px;
+        width: 25px;
+    }
 }
 
 .chat-input {

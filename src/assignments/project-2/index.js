@@ -11,6 +11,7 @@ import InputBox from './components/inputbox'
 
 import MENUITEMS from './data/menu_data.js'
 import ADITEMS from './data/ad_data.js'
+import IMGITEMS from './data/img_data.js'
 
 import './app.scss'
 
@@ -70,7 +71,7 @@ class Chat extends React.Component {
 
 			<Layout.Content title="Chatroom">
 				<h2>Messages</h2>
-				<Messages chat={chat} />
+				<Messages chat={chat} imgItems={IMGITEMS} />
 				<InputBox currentText={currentText} onType={this.onType} onSend={this.onSend} getTypingMessage={this.getTypingMessage()} />
 			</Layout.Content>
 			
