@@ -79,7 +79,7 @@ class Chat extends React.Component {
 			</Layout.Sidebar>
 
 			<Layout.Adbar title="Pizza Partners">
-				<div class="ads-container">
+				<div className="ads-container">
 					<Advertisement adItems={ADITEMS}/>
 				</div>
 			</Layout.Adbar>
