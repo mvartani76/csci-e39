@@ -128,6 +128,38 @@ footer {
             text-align: center;
             background-color: red;
             height: 100%;
+        }
+
+        .layout--footer {
+            grid-area: footer;
+        }
+    }
+
+    @media(max-width: 500px) {
+        grid-template-areas: 
+            "header"
+            "side"
+            "main"
+            "footer";
+
+        .layout--header {
+            grid-area: header;
+        }
+
+        .layout--main {
+            grid-area: main;
+        }
+
+        .layout--sidebar {
+            grid-area: side;
+            background-color: invert($sidebar-background-color);
+        }
+
+        .layout--adbar {
+            grid-area: ad;
+            text-align: center;
+            background-color: red;
+            height: 100%;
             
         }
 
